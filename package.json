@@ -10,7 +10,7 @@
     "build-babel": "babel -d ./build/src/ ./src/ -s",
     "build": "npm run build-babel",
     "start-And-migration": "npm run migrate && npm start",
-    "start-And-migration-seed": "npm run migrate && npm start && npm executeseeder",
+    "start-And-migration-seed": "npm run migrate && npm start && npm run executeseeder",
     "start-undomigrate":"npm run undomigrate && npm start",
     "start": "nodemon --exec babel-node ./src/index.js",
     "undomigrate": "npx sequelize-cli db:migrate:undo:all",
