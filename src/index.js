@@ -86,7 +86,7 @@ app.use("/PostgreSQL/API", dislikeRoute);
 app.get("/", (req, res) =>{
     res.status(200).json({
         status: "200",
-        author: "Alexis",
+        author: "cedro",
         message: "Welcome to postgresql API",
 
     });

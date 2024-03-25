@@ -14,9 +14,8 @@
     "start": "nodemon --exec babel-node ./src/index.js",
     "undomigrate": "npx sequelize-cli db:migrate:undo:all",
     "migrate": "sequelize db:migrate",
-    "migrate:seed": "npm run migrate && npm run executeseeder" 
+    "migrate:seed": "npm run migrate && npm run executeseeder"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,7 +24,7 @@
     "@babel/core": "^7.23.2",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
-    "cloudinary": "^1.41.0",
+    "cloudinary": "^1.41.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

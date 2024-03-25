@@ -2,6 +2,7 @@ import Database from "../Database/models";
 import { uploadToCloud } from "../helper/cloud";
 import { Sequelize } from "sequelize";
 
+
 const User = Database["Users"];
 const Post = Database["Posts"];
 const Comment = Database["Comments"];
@@ -32,6 +33,7 @@ export const addPost = async (req, res) => {
 
     let savedPostImage;
     if (req.file) savedPostImage = await uploadToCloud(req.file, res);
+    console.log(savedPostImage);
 
     const post = await Post.create({
       postTitle,
@@ -39,6 +41,7 @@ export const addPost = async (req, res) => {
       postContent,
       userId: loggedUser, 
     });
+    
 
     return res.status(201).json({
       status: "201",
@@ -58,6 +61,9 @@ export const addPost = async (req, res) => {
     });
   }
 };
+
+
+
 
 
 // getting all posts
@@ -348,5 +354,4 @@ export const getSinglePost = async (req, res) => {
       });
       }
   }
-
 
